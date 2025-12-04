@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("a0: ");
+        int a0 = in.nextInt();
+        System.out.print("n: ");
+        int n = in.nextInt();
+        for (int i = 0; i < n; i++) {
+            int next = 0;
+            int c = Math.abs(a0);
+            while (c != 0) {
+                int d = c % 10;
+                next += d * 2;
+                c /= 10;
+            }
+            if (a0 == 0) {
+                next = 0;
+            }
+            a0=next;
+            System.out.print(a0+" ");
+        }
+    }
+}
