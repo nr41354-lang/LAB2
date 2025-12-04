@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner in =new Scanner (System.in);
+        System.out.println("начальная числ. нас-я, темп прироста нас-я, миграция, вместимость микр-а");
+        long P0= in.nextLong(), g= in.nextLong(), m= in.nextLong(), Cap= in.nextLong();
+        long y= 0;
+        while (P0<Cap) {
+            long k = P0 * g / 100;
+            P0 += (m + k);
+            y++;
+        }
+            if(P0>=Cap){
+                P0=Cap;
+            }
+            System.out.print(y);
+            System.out.print(P0);
+    }
+}
